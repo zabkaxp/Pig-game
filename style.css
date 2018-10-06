@@ -2,6 +2,10 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 20px;
+    font-size: 18px;
+    font-family:sans-serif;
+    text-align: center;
 }
 
 body{
@@ -33,3 +37,110 @@ body{
 .active{
     background-color: #e8eae5;
 }
+
+.game-panel{
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.panel-box{
+    position:absolute;
+    z-index:100;
+    display: inline-flex;
+    padding:4px;
+    border-radius:5px;
+    cursor:pointer;
+    transition: all .3s;
+    padding-right:10px;
+}
+
+.panel-box:hover{
+    
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+.panel-box:active{
+    transform: translateY(3px);
+}
+.new-game{
+    top:50px;
+}
+
+.dice{
+    position:absolute;
+    z-index: 100;
+    top:180px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.roll-dice{
+    bottom:100px;
+}
+
+.hold{
+    bottom: 50px;
+}
+
+
+
+.icon{
+    height:20px;
+    width:40px;
+    fill: #b20e56;
+}
+
+.main-box{
+    display:flex;
+    justify-content: center; 
+ }
+.main-box--info{
+    position:absolute;
+    display: inline-flex; 
+    top:120px;
+}
+
+.main-box--result{
+    position: absolute;
+    top:190px;
+    font-size: 100px;
+    color:#b20e56;
+}
+
+.player-box{
+    
+}
+.current-box{
+    display:flex;
+    justify-content: center; 
+
+}
+
+.current-box--info{
+    position: absolute;
+    bottom: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ce256f;
+}
+
+.current-result{
+    margin-top:10px;
+        color:white;
+}
+
+.active-player--box{
+    
+}
+.new-game--icon{
+
+}
+.roll-dice--icon{
+
+}
+.hold--icon{
+
+}
+

@@ -12,24 +12,78 @@
    <body>
       <main class="container">
           <section class="player player-1 active">
-              <div class="player-name">
-                  PLAYER 1
-                  <div class="player-name--active-box">
+                <div class="player-box">
+                  <div class="main-box">
+                      <div class="main-box--info">
+                          <div class="name">PLAYER 1</div>
+                              <div class="active-plyer--box">
+                                  <svg class="icon active-player--icon">
+                                      <use xlink:href="img/sprite.svg#icon-man"></use>
+                                  </svg>
+                              </div>
+                      </div>
+                      <div class="main-box--result">5</div>
+                  </div>
+                  <div class="current-box">
+                     <div class="current-box--info">
+                          <div class="current">CURRENT</div>
+                          <div class="current-result">5</div> 
+                      </div>
                   </div>
               </div>
-              <div class="player-score">
-                  
-              </div>
-              <div class="player-results">
-                  <span>CURRENT</span>
-                  <span>5</span>
-              </div>
+              
+              
           </section>
+          
           <section class="game-panel">
-              
+              <div class="panel-box new-game">
+                   <svg class="icon new-game--icon">
+                       <use xlink:href="img/sprite.svg#icon-circle-with-plus"></use>
+                   </svg>
+                   <span>NEW GAME</span>
+              </div>   
+              <div class="dice">
+                     <img src="img/d1.png" alt="dice">
+              </div>
+              <div class="panel-box roll-dice">
+                  <div class="roll-dice--boc">
+                       <svg class="icon roll-dice--icon">
+                           <use xlink:href="img/sprite.svg#icon-cw"></use>
+                       </svg>
+                       <span>ROLL DICE</span>
+                  </div>  
+              </div>
+              <div class="panel-box hold">
+                  <div class="hold--box">
+                       <svg class="icon hold--icon">
+                           <use xlink:href="img/sprite.svg#icon-download"></use>
+                       </svg>
+                       <span>HOLD</span>
+                  </div> 
+              </div>
+            
           </section>
+          
           <section class="player player-2">
-              
+             <div class="player-box">
+                  <div class="main-box">
+                      <div class="main-box--info">
+                          <div class="name">PLAYER 2</div>
+                              <div class="active-plyer--box">
+                                  <svg class="icon active-player--icon">
+                                      <use xlink:href="img/sprite.svg#icon-man"></use>
+                                  </svg>
+                              </div>
+                      </div>
+                      <div class="main-box--result">15</div>
+                  </div>
+                  <div class="current-box">
+                     <div class="current-box--info">
+                          <div class="current">CURRENT</div>
+                          <div class="current-result">53</div>  
+                      </div>
+                  </div>
+              </div>
           </section>
           
       </main>

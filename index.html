@@ -7,27 +7,45 @@
        <meta name="description" content="The newest version of the Pig game for two players">
        <meta name="keywords" content="pig game, game for 2 players, game with dice, best online game, I'm bored, rolling the dice, free game online, most popular game">
        <meta name="author" content="Marta Wojno">
+       <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
        <link rel="stylesheet" href="style.css">
    </head>
    <body>
+     <section class="overlay">
+         <div class="overlay--header">Welcome to the Pig Game!</div>
+             <div class="overlay--instructions">
+                 On a turn, a player rolls the die repeatedly. The goal is to accumulate as many points as possible, adding up the numbers rolled on the die. However, if a player rolls a 6, the player's turn is over and any points they have accumulated during this turn are forfeited. Rolling a 6 doesn't wipe out your entire score, just the total earned during that particular roll.
+
+                 A player can also choose to hold if they do not want to take a chance of rolling a 6. If the player chooses to hold, all of the points rolled during that turn are added to his or her score.
+
+                 When a player reaches a total of 100 or more points( that is the default number), the game ends and that player is the winner.</div>
+                     <div class="input--instructions">Simply put Your names and the score you wish to play to in the below boxes and let's go!</div>
+                         <input type="text" placeholder="Name of the first player" class="overlay--name" id="chosenName1">
+                         <input type="text" placeholder="Name of the second player" class="overlay--name" id="chosenName2">
+                         <br/>
+                         <input type="number" min=1 placeholder="Winning score" class="overlay--score" id="chosenScore">
+                           <br/>
+                            <button class="game-btn">Let's go!</button>
+         
+     </section>
       <main class="container">
           <section class="player player-1 active">
                 <div class="player-box">
                   <div class="main-box">
                       <div class="main-box--info">
-                          <div class="name">PLAYER 1</div>
+                          <div class="name player1" id="player1">PLAYER 1</div>
                               <div class="active-plyer--box">
                                   <svg class="icon active-player--icon">
                                       <use xlink:href="img/sprite.svg#icon-man"></use>
                                   </svg>
                               </div>
                       </div>
-                      <div class="main-box--result">5</div>
+                      <div class="main-box--result" id="roundScore1">5</div>
                   </div>
                   <div class="current-box">
                      <div class="current-box--info">
                           <div class="current">CURRENT</div>
-                          <div class="current-result">5</div> 
+                          <div class="current-result" id="score1">5</div> 
                       </div>
                   </div>
               </div>
@@ -36,17 +54,17 @@
           </section>
           
           <section class="game-panel">
-              <div class="panel-box new-game">
+              <div class="panel-box new-game--box">
                    <svg class="icon new-game--icon">
                        <use xlink:href="img/sprite.svg#icon-circle-with-plus"></use>
                    </svg>
                    <span>NEW GAME</span>
               </div>   
               <div class="dice">
-                     <img src="img/d1.png" alt="dice">
+                     <img class="dice-img" src="img/d1.png" alt="dice">
               </div>
               <div class="panel-box roll-dice">
-                  <div class="roll-dice--boc">
+                  <div class="roll-dice--box">
                        <svg class="icon roll-dice--icon">
                            <use xlink:href="img/sprite.svg#icon-cw"></use>
                        </svg>
@@ -68,24 +86,26 @@
              <div class="player-box">
                   <div class="main-box">
                       <div class="main-box--info">
-                          <div class="name">PLAYER 2</div>
+                          <div class="name" id="player2">PLAYER 2</div>
                               <div class="active-plyer--box">
                                   <svg class="icon active-player--icon">
                                       <use xlink:href="img/sprite.svg#icon-man"></use>
                                   </svg>
                               </div>
                       </div>
-                      <div class="main-box--result">15</div>
+                      <div class="main-box--result" id="roundScore2">15</div>
                   </div>
                   <div class="current-box">
                      <div class="current-box--info">
                           <div class="current">CURRENT</div>
-                          <div class="current-result">53</div>  
+                          <div class="current-result" id="score2">53</div>  
                       </div>
                   </div>
               </div>
           </section>
           
       </main>
+      
+      <script src="main.js"></script>
    </body>
 </html>

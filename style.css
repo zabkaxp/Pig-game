@@ -4,7 +4,7 @@
     box-sizing: border-box;
     line-height: 20px;
     font-size: 18px;
-    font-family:sans-serif;
+    font-family: 'Lobster', cursive;
     text-align: center;
 }
 
@@ -15,27 +15,44 @@ body{
     display: flex;
     justify-content: center; 
     align-items: center;
+    
 }
 
 .container{
+    display: none;
     width:900px;
     min-height: 500px;
     background-color: white;
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.4);
     position: relative;
 }
+
+.name{ 
+    font-size:21px;
+    letter-spacing: 2px;
+    
+}
 .player{
     position: absolute;
     width:50%;
     height:100%;
+    filter: opacity(.5);
+    color:gray;
 }
 
 .player-2{
     right:0;
+    
+}
+
+.winner{
+    filter: saturate(8);
 }
 
 .active{
     background-color: #e8eae5;
+    color:black;
+    filter: opacity(1);
 }
 
 .game-panel{
@@ -65,7 +82,7 @@ body{
 .panel-box:active{
     transform: translateY(3px);
 }
-.new-game{
+.new-game--box{
     top:50px;
 }
 
@@ -109,9 +126,6 @@ body{
     color:#b20e56;
 }
 
-.player-box{
-    
-}
 .current-box{
     display:flex;
     justify-content: center; 
@@ -131,16 +145,75 @@ body{
         color:white;
 }
 
-.active-player--box{
+
+
+.overlay--header{
+    letter-spacing: 4px;
+    font-size: 40px;
+    line-height: 35px;
+    color:#b20e56;
+    transition: all .3s;
+
+}
+.overlay--header:hover{
+    transform: scale(1.1);
+}
+
+.overlay--instructions{
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin:50px 130px;
+    
     
 }
-.new-game--icon{
+.input--instructions{
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+input{
+    padding: 15px 4px;
+}
+
+input:focus{
+    outline: 0;
+    border: 1px solid #ce256f;
+}
+
+.overlay--name{
+    display:inline-block;
+}
+
+.overlay--score{
+    margin-top:30px;
+    
+}
+.game-btn{
+    outline:none;
+    font-size: 30px;
+    background-color: green;
+    padding: 6px 10px;
+    border:3px solid darkgreen;
+    border-radius: 10px;
+    transition: all .2s;
+    margin-top:35px;
+}
+
+.game-btn:hover{
+    background-color: forestgreen;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
 
 }
-.roll-dice--icon{
 
-}
-.hold--icon{
+.game-btn:active{
+    background-color: forestgreen;
+    transform: translateY(3px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
 
 }
 
